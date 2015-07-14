@@ -1,0 +1,39 @@
+<template name="layout">
+  {{#ionBody}}
+
+    {{#ionSideMenuContainer side="disable"}}
+
+      {{#ionSideMenus}}
+
+        {{#ionSideMenu}}
+          <div class="bar bar-header bar-light">
+            <h1 class="title">Rich Of Lamongan</h1>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <a href="{{pathFor 'cariPotensi'}}"><div class="item item-icon-right" data-ion-menu-close>
+                  Cari Potensi
+              </div></a>
+              <a href="{{pathFor 'cariPotensi'}}"><div class="item item-icon-right" data-ion-menu-close>
+                  Tentang Lamongan
+              </div></a>
+            </div>
+          </div>
+        {{/ionSideMenu}}
+
+      {{/ionSideMenus}}
+
+      {{#ionSideMenuContent}}
+
+        {{> ionNavBar class="bar-light"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+      {{/ionSideMenuContent}}
+
+    {{/ionSideMenuContainer}}
+
+  {{/ionBody}}
+</template>
